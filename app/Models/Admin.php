@@ -12,7 +12,7 @@ use Laravel\Jetstream\HasTeams;
 use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
 
-class Admin extends Model
+class Admin extends Authenticatable
 {
     use HasApiTokens;
     use HasFactory;
@@ -26,6 +26,7 @@ class Admin extends Model
      *
      * @var string[]
      */
+
     protected $fillable = [
         'name', 'email', 'password',
     ];
